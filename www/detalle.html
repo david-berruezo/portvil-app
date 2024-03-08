@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">-->
+    <meta name="color-scheme" content="light dark">
+    <title>Portvil</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css?version=1" type="text/css">
+    <link rel="stylesheet" href="./css/style.css?version=4" type="text/css">
+    <link rel="stylesheet" href="./css/swiper.min.css?version=1" type="text/css">
+</head>
+<body>
+    
+    <!-- loader -->
+    <div id="loader">
+        <img src="img/loading-icon.png" alt="icon" class="loading-icon">
+    </div>
+    <!-- * loader -->
+    
+    <!-- App Header -->
+    <div class="appHeader bg-primary text-light"></div>
+    <!-- * App Header -->
+    
+    <!-- App Capsule -->
+    <div id="appCapsule">
+        
+        <!-- carousel monuments -->
+        <div class="section mt-4">
+            <div class="section-heading padding">
+                <h2 class="title">Propiedad</h2>
+                <a href="app-cards.html" class="link"></a>
+            </div>
+        
+         
+       <div class="wide-block pt-2 pb-2"> 
+        <div class="panel panel-default my_dashboard_review">
+            <div class="panel-heading">
+             <i class="fa fa-book fa-fw"></i>Editar Villas
+            </div>
+            <div class="panel-body">
+             <form id="formulario" name="formulario" method="post" action="http://www.portvil.net/dynamic/dupdate/avantio_accomodations" onsubmit="return validateFields();">
+              <div class="row">
+               <div class="col-lg-12">
+                <!-- Hidden elements -->
+                <input type="hidden" name="language" value="es">
+                <input type="hidden" name="id" value="297527">
+                <input type="hidden" name="position" value="0">
+                <input type="hidden" name="id" value="297527">
+                <input type="hidden" name="position" value="0">
+                <input type="hidden" name="id_avantio" value="1">
+                <input type="hidden" name="status" value="ACTIVED">
+                <!-- Language Elements -->
+               </div>
+              </div>
+
+              <!-- row -->
+              <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                    <label for="text_title">Nombre del alojamiento</label>
+                    <input type="text" name="text_title" value="ALEGRE" id="text_title" class="form-control" required="required">
+                    </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_numero_registro_turistico">Número de registro turístico</label>
+                 <input type="text" name="text_numero_registro_turistico" value="ETV1034" id="text_numero_registro_turistico" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="dynamic_taxonomy">Tipos de propiedad</label>
+                 <select class="form-control" name="dynamic_taxonomy" id="dynamic_taxonomy" required="required">
+                 </select>
+                </div>
+               </div>
+               
+               <div class="col-md-12" style="clear:both;margin-top:100px;">
+                <hr>
+                <h3>Situación del alojamiento</h3>
+                <br style="clear:both;">
+               </div>
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="dynamic_geocountry">País</label>
+                 <select class="form-control" name="dynamic_geocountry" id="dynamic_geocountry" required="required">
+                 </select>
+                 <p></p>
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="dynamic_georegion">Comunidad</label>
+                 <select class="form-control" name="dynamic_georegion" id="dynamic_georegion" required="required">
+                 </select>
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="dynamic_geocity">Ciudad</label>
+                 <select class="form-control" name="dynamic_geocity" id="dynamic_geocity" required="required">
+                 </select>
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="dynamic_geolocality">Localidad</label>
+                 <select class="form-control" name="dynamic_geolocality" id="dynamic_geolocality" required="required">
+                 </select>
+                 <p></p>
+                </div>
+               </div>
+               
+
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="dynamic_geodistrict">Distrito</label>
+                 <select class="form-control" name="dynamic_geodistrict" id="dynamic_geodistrict" required="required">
+                 </select>
+                 <p></p>
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_geo_cp">Código Postal</label>
+                 <input type="text" name="text_geo_cp" value="7460" id="text_geo_cp" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_geo_tipo_calle">Nombre de vía</label>
+                 <input type="text" name="text_geo_tipo_calle" value="CAMINO" id="text_geo_tipo_calle" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_geo_calle">Calle</label>
+                 <input type="text" name="text_geo_calle" value="Camí Vell de Sant Vicenç" id="text_geo_calle" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_geo_numero">Número</label>
+                 <input type="text" name="text_geo_numero" value="" id="text_geo_numero" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_geo_bloque">Piso / Letra</label>
+                 <input type="text" name="text_geo_bloque" value="" id="text_geo_bloque" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_geo_puerta">Puerta</label>
+                 <input type="text" name="text_geo_puerta" value="" id="text_geo_puerta" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_geo_piso">Piso</label>
+                 <input type="text" name="text_geo_piso" value="" id="text_geo_piso" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_geo_latitud">GPS Latitud</label>
+                 <input type="text" name="text_geo_latitud" value="39.891040531049" id="text_geo_latitud" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_geo_longitud">GPS Longitud</label>
+                 <input type="text" name="text_geo_longitud" value="3.0278631362457" id="text_geo_longitud" class="form-control">
+                </div>
+               </div>
+               
+
+               <div class="col-md-12" style="clear:both;margin-top:100px;">
+                <hr>
+                <h3>Características principales</h3>
+                <h4>Distribución</h4>
+                <br style="clear:both;">
+               </div>
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_metros_cuadrados">Superficie parcela</label>
+                 <input type="text" name="number_metros_cuadrados" value="2530" id="number_metros_cuadrados" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_metros_cuadrados_utiles">Superficie vivienda</label>
+                 <input type="text" name="number_metros_cuadrados_utiles" value="138" id="number_metros_cuadrados_utiles" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_metros_cuadrados_construidos">Metros cuadrados, superfície construida</label>
+                 <input type="text" name="number_metros_cuadrados_construidos" value="0" id="number_metros_cuadrados_construidos" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_metros_cuadrados_terraza">Metros cuadrados, terraza</label>
+                 <input type="text" name="number_metros_cuadrados_terraza" value="0" id="number_metros_cuadrados_terraza" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_capacidad_minima">Ocupación mínima</label>
+                 <input type="text" name="number_capacidad_minima" value="1" id="number_capacidad_minima" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_capacidad_sin_suplemento">Ocupación sin suplemento</label>
+                 <input type="text" name="number_capacidad_sin_suplemento" value="6" id="number_capacidad_sin_suplemento" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-md-12" style="clear:both;">
+                <hr>
+                <h4>Dormitorios</h4>
+                <br style="clear:both;">
+               </div>
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_habitaciones">Número de habitaciones</label>
+                 <input type="text" name="number_habitaciones" value="3" id="number_habitaciones" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_camas_doble">Número de camas dobles</label>
+                 <input type="text" name="number_camas_doble" value="1" id="number_camas_doble" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_camas_individual">Número de camas individuales</label>
+                 <input type="text" name="number_camas_individual" value="4" id="number_camas_individual" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_sofas_cama">Número de sofás cama</label>
+                 <input type="text" name="number_sofas_cama" value="0" id="number_sofas_cama" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_sofas_cama_doble">Número de sofás cama doble</label>
+                 <input type="text" name="number_sofas_cama_doble" value="0" id="number_sofas_cama_doble" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_literas">Número de literas</label>
+                 <input type="text" name="number_literas" value="0" id="number_literas" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-md-12" style="clear:both;">
+                <hr>
+                <h4>Baños</h4>
+                <br style="clear:both;">
+               </div>
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_aseos">Número de aseos</label>
+                 <input type="text" name="number_aseos" value="0" id="number_aseos" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_banyos_banyera">Número de baños con bañera</label>
+                 <input type="text" name="number_banyos_banyera" value="1" id="number_banyos_banyera" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_banyos_ducha">Número de baños con ducha</label>
+                 <input type="text" name="number_banyos_ducha" value="1" id="number_banyos_ducha" class="form-control">
+                </div>
+               </div>
+               
+               <div class="col-md-12" style="clear:both;">
+                <hr>
+                <h4>Cocina</h4>
+                <br style="clear:both;">
+               </div>
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_cocinas">Número cocinas</label>
+                 <input type="text" name="number_cocinas" value="1" id="number_cocinas" class="form-control">
+                </div>
+               </div>
+               
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_cocina_clase">Clase de cocina</label>
+                 <input type="text" name="text_cocina_clase" value="independiente" id="text_cocina_clase" class="form-control">
+                </div>
+               </div>
+               <!-- number -->
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_cocina_tipo">Tipo de cocina</label>
+                 <input type="text" name="text_cocina_tipo" value="vitroceramica" id="text_cocina_tipo" class="form-control">
+                </div>
+               </div>
+               <!-- number -->
+               
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_grups">Grupos</label>
+                 <input type="checkbox" name="checkbox_grups" value="1" disabled="disabled" id="checkbox_grups" style="margin:10px;">
+                </div>
+               </div>
+               
+               <div class="col-md-12" style="clear:both;margin-top:100px;">
+                <hr>
+                <h3>Características adicionales</h3>
+                <br style="clear:both;">
+               </div>
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_aparcamiento">Aparcamiento</label>
+                 <input type="checkbox" name="checkbox_aparcamiento" value="1" disabled="disabled" id="checkbox_aparcamiento" style="margin:10px;">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="number_plazas_aparcamiento">Plazas de aparcamiento</label>
+                 <input type="text" name="number_plazas_aparcamiento" value="" id="number_plazas_aparcamiento" class="form-control">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_piscina">Piscina</label>
+                 <input type="checkbox" name="checkbox_piscina" value="1" checked="checked" disabled="disabled" id="checkbox_piscina" style="margin:10px;">
+                </div>
+               </div>
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_dimensiones_piscina">Dimensiones piscina</label>
+                 <input type="text" name="text_dimensiones_piscina" value="8 x 4" id="text_dimensiones_piscina" class="form-control">
+                </div>
+               </div>
+               <!-- number -->
+               
+               <div class="col-lg-4">
+                <div class="form-group">
+                 <label for="text_tipo_piscina">Tipo piscina</label>
+                 <input type="text" name="text_tipo_piscina" value="privada" id="text_tipo_piscina" class="form-control">
+                </div>
+               </div>
+               <!-- number -->
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_tv">Tv</label>
+                 <input type="checkbox" name="checkbox_tv" value="1" checked="checked" disabled="disabled" id="checkbox_tv" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-12" style="clear:both;margin-top:100px;">
+                <hr>
+                <h3>Amenities</h3>
+                <br style="clear:both;">
+               </div>
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_jardin">Jardín</label>
+                 <input type="checkbox" name="checkbox_jardin" value="1" checked="checked" disabled="disabled" id="checkbox_jardin" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_muebles_jardin">Muebles de jardín</label>
+                 <input type="checkbox" name="checkbox_muebles_jardin" value="1" checked="checked" disabled="disabled" id="checkbox_muebles_jardin" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_plancha">Plancha</label>
+                 <input type="checkbox" name="checkbox_plancha" value="1" checked="checked" disabled="disabled" id="checkbox_plancha" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_chimenea">Chimenea</label>
+                 <input type="checkbox" name="checkbox_chimenea" value="1" disabled="disabled" id="checkbox_chimenea" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_barbacoa">Barbacoa</label>
+                 <input type="checkbox" name="checkbox_barbacoa" value="1" checked="checked" disabled="disabled" id="checkbox_barbacoa" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_radio">Radio</label>
+                 <input type="checkbox" name="checkbox_radio" value="1" disabled="disabled" id="checkbox_radio" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_minibar">Mini-Bar</label>
+                 <input type="checkbox" name="checkbox_minibar" value="1" disabled="disabled" id="checkbox_minibar" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_terraza">Terraza</label>
+                 <input type="checkbox" name="checkbox_terraza" value="1" checked="checked" disabled="disabled" id="checkbox_terraza" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_parcela_vallada">Parcela vallada</label>
+                 <input type="checkbox" name="checkbox_parcela_vallada" value="1" checked="checked" disabled="disabled" id="checkbox_parcela_vallada" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_caja_seguridad">caja fuerte</label>
+                 <input type="checkbox" name="checkbox_caja_seguridad" value="1" checked="checked" disabled="disabled" id="checkbox_caja_seguridad" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_ascensor">Ascensor</label>
+                 <input type="checkbox" name="checkbox_ascensor" value="1" disabled="disabled" id="checkbox_ascensor" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_dvd">reproductor de DVD</label>
+                 <input type="checkbox" name="checkbox_dvd" value="1" disabled="disabled" id="checkbox_dvd" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_balcon">Balcón</label>
+                 <input type="checkbox" name="checkbox_balcon" value="1" disabled="disabled" id="checkbox_balcon" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_exprimidor">Exprimidor</label>
+                 <input type="checkbox" name="checkbox_exprimidor" value="1" checked="checked" disabled="disabled" id="checkbox_exprimidor" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_hervidor_electrico">Hervidor electrico</label>
+                 <input type="checkbox" name="checkbox_hervidor_electrico" value="1" checked="checked" disabled="disabled" id="checkbox_hervidor_electrico" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_secador_pelo">Secador de pelo</label>
+                 <input type="checkbox" name="checkbox_secador_pelo" value="1" checked="checked" disabled="disabled" id="checkbox_secador_pelo" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_zona_ninos">zona para niños</label>
+                 <input type="checkbox" name="checkbox_zona_ninos" value="1" disabled="disabled" id="checkbox_zona_ninos" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_gimnasio">Gimnasio</label>
+                 <input type="checkbox" name="checkbox_gimnasio" value="1" disabled="disabled" id="checkbox_gimnasio" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_alarma">Alarma</label>
+                 <input type="checkbox" name="checkbox_alarma" value="1" disabled="disabled" id="checkbox_alarma" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_tennis">Pista de tenis</label>
+                 <input type="checkbox" name="checkbox_tennis" value="1" disabled="disabled" id="checkbox_tennis" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_squash">Squash</label>
+                 <input type="checkbox" name="checkbox_squash" value="1" disabled="disabled" id="checkbox_squash" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_paddel">Paddel</label>
+                 <input type="checkbox" name="checkbox_paddel" value="1" disabled="disabled" id="checkbox_paddel" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_sauna">Sauna</label>
+                 <input type="checkbox" name="checkbox_sauna" value="1" disabled="disabled" id="checkbox_sauna" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_jacuzzi">Jacuzzi</label>
+                 <input type="checkbox" name="checkbox_jacuzzi" value="1" disabled="disabled" id="checkbox_jacuzzi" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_apta_discapacitados">Apta para discapacitados</label>
+                 <input type="checkbox" name="checkbox_apta_discapacitados" value="1" disabled="disabled" id="checkbox_apta_discapacitados" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_nevera">Nevera</label>
+                 <input type="checkbox" name="checkbox_nevera" value="1" checked="checked" disabled="disabled" id="checkbox_nevera" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_congelador">Congelador</label>
+                 <input type="checkbox" name="checkbox_congelador" value="1" checked="checked" disabled="disabled" id="checkbox_congelador" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_lavavajillas">Lavavajillas</label>
+                 <input type="checkbox" name="checkbox_lavavajillas" value="1" checked="checked" disabled="disabled" id="checkbox_lavavajillas" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_lavadora">Lavadora</label>
+                 <input type="checkbox" name="checkbox_lavadora" value="1" checked="checked" disabled="disabled" id="checkbox_lavadora" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_secadora">Secadora</label>
+                 <input type="checkbox" name="checkbox_secadora" value="1" disabled="disabled" id="checkbox_secadora" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_cafetera">Cafetera</label>
+                 <input type="checkbox" name="checkbox_cafetera" value="1" checked="checked" disabled="disabled" id="checkbox_cafetera" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_tostadora">Tostadora</label>
+                 <input type="checkbox" name="checkbox_tostadora" value="1" checked="checked" disabled="disabled" id="checkbox_tostadora" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_microondas">Microondas</label>
+                 <input type="checkbox" name="checkbox_microondas" value="1" checked="checked" disabled="disabled" id="checkbox_microondas" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_horno">Horno</label>
+                 <input type="checkbox" name="checkbox_horno" value="1" checked="checked" disabled="disabled" id="checkbox_horno" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_vajilla">Vajilla</label>
+                 <input type="checkbox" name="checkbox_vajilla" value="1" checked="checked" disabled="disabled" id="checkbox_vajilla" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_utensilios_cocina">Utensilios de concina</label>
+                 <input type="checkbox" name="checkbox_utensilios_cocina" value="1" checked="checked" disabled="disabled" id="checkbox_utensilios_cocina" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_batidora">Batidora</label>
+                 <input type="checkbox" name="checkbox_batidora" value="1" disabled="disabled" id="checkbox_batidora" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group">
+                 <label for="checkbox_extra_nevera">Extra nevera</label>
+                 <input type="checkbox" name="checkbox_extra_nevera" value="1" disabled="disabled" id="checkbox_extra_nevera" style="margin:10px;">
+                </div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6">
+                <div class="form-group"><label for="checkbox_vinoteca">Vinoteca / frigorifico vinos</label><input type="checkbox" name="checkbox_vinoteca" value="1" disabled="disabled" id="checkbox_vinoteca" style="margin:10px;"></div>
+               </div>
+               
+               <!-- checkbox -->
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_hervidor_agua">Hervidor de agua</label><input type="checkbox" name="checkbox_hervidor_agua" value="1" disabled="disabled" id="checkbox_hervidor_agua" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_cafetera_nespresso">Cafetera Nespresso</label><input type="checkbox" name="checkbox_cafetera_nespresso" value="1" disabled="disabled" id="checkbox_cafetera_nespresso" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_wifi">Wifi</label><input type="checkbox" name="checkbox_wifi" value="1" disabled="disabled" id="checkbox_wifi" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_aire_acondicionado">Aire acondicionado</label><input type="checkbox" name="checkbox_aire_acondicionado" value="1" disabled="disabled" id="checkbox_aire_acondicionado" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_ventilador">Ventilador</label><input type="checkbox" name="checkbox_ventilador" value="1" disabled="disabled" id="checkbox_ventilador" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_calefacion_central">Calfacción central</label><input type="checkbox" name="checkbox_calefacion_central" value="1" disabled="disabled" id="checkbox_calefacion_central" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_bomba_aire">Bomba aire frio / calor</label><input type="checkbox" name="checkbox_bomba_aire" value="1" disabled="disabled" id="checkbox_bomba_aire" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_suelo_radiante">Suelo Radiante</label><input type="checkbox" name="checkbox_suelo_radiante" value="1" disabled="disabled" id="checkbox_suelo_radiante" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_cine">Cine</label><input type="checkbox" name="checkbox_cine" value="1" disabled="disabled" id="checkbox_cine" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_equipo_musica">Equipo de música</label><input type="checkbox" name="checkbox_equipo_musica" value="1" disabled="disabled" id="checkbox_equipo_musica" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_barbacoa_gas">Barbacoa de gas</label><input type="checkbox" name="checkbox_barbacoa_gas" value="1" disabled="disabled" id="checkbox_barbacoa_gas" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_bano_turco">Baño turco</label><input type="checkbox" name="checkbox_bano_turco" value="1" disabled="disabled" id="checkbox_bano_turco" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_billar">Billars</label><input type="checkbox" name="checkbox_billar" value="1" disabled="disabled" id="checkbox_billar" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_ping_pong">Ping pong</label><input type="checkbox" name="checkbox_ping_pong" value="1" disabled="disabled" id="checkbox_ping_pong" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_seguridad_piscina">Seguridad piscina</label><input type="checkbox" name="checkbox_seguridad_piscina" value="1" disabled="disabled" id="checkbox_seguridad_piscina" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_accesorios_yoga">Accesorios yoga</label><input type="checkbox" name="checkbox_accesorios_yoga" value="1" disabled="disabled" id="checkbox_accesorios_yoga" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_hosekeeping">Hosekeeping on site</label><input type="checkbox" name="checkbox_hosekeeping" value="1" disabled="disabled" id="checkbox_hosekeeping" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_trona">Trona</label><input type="checkbox" name="checkbox_trona" value="1" disabled="disabled" id="checkbox_trona" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_mascotas">mascotas</label><input type="checkbox" name="checkbox_mascotas" value="1" disabled="disabled" id="checkbox_mascotas" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_helipuerto">Helipuerto</label><input type="checkbox" name="checkbox_helipuerto" value="1" disabled="disabled" id="checkbox_helipuerto" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_zona_de_bar_exterior">Zona de bar exterior</label><input type="checkbox" name="checkbox_zona_de_bar_exterior" value="1" disabled="disabled" id="checkbox_zona_de_bar_exterior" style="margin:10px;"></div></div>
+               <div class="col-md-6"><div class="form-group"><label for="checkbox_discoteca_privada">Discoteca privada</label><input type="checkbox" name="checkbox_discoteca_privada" value="1" disabled="disabled" id="checkbox_discoteca_privada" style="margin:10px;"></div></div>
+               
+               
+           </div> <!-- pantel-->
+
+       </div> <!-- marco -->
+
+      </div> <!-- section-->
+
+
+    </div>
+    <!-- app capsule-->
+
+    <br><br>
+
+    <!-- app footer --> 
+    <div class="appFooter">
+        <div class="footer-title">Copyright © Portvil S.L.U 2023. All Rights Reserved.</div>
+    </div>
+    <!-- * app footer -->
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu"></div>
+    <!-- * App Bottom Menu -->
+
+
+    <!-- App Sidebar -->
+    <div class="modal fade panelbox panelbox-left" id="sidebarPanel" tabindex="-1" role="dialog"></div>
+    <!-- * App Sidebar -->
+    
+
+    <!-- Base Js File -->
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js//jquery.min.js"></script> -->
+    <!-- * App Bottom Menu -->
+    <!-- ========= JS Files =========  -->
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <!-- <script src="js/plugins/splide.min.js"></script> -->
+    <!-- Swiper -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- Bootstrap -->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="js/bootstrap.min.js?version=1"></script>
+    <!-- funciones -->
+    <script src="js/funciones.js?v=13"></script>
+
+</body>
+</html>

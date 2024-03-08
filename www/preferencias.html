@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portvil</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css?version=1" type="text/css">
+    <link rel="stylesheet" href="./css/style.css?version=5" type="text/css">
+    <link rel="stylesheet" href="./css/swiper.min.css?version=1" type="text/css">
+</head>
+<body>
+    
+    <!-- loader -->
+    <div id="loader">
+        <img src="img/loading-icon.png" alt="icon" class="loading-icon">
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader bg-primary text-light"></div>
+    <!-- * App Header -->
+    
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+   
+        <!--
+        <div class="listview-title mt-1">Theme</div>
+        <ul class="listview image-listview text inset no-line">
+            <li>
+                <div class="item">
+                    <div class="in">
+                        <div>
+                            Dark Mode
+                        </div>
+                        <div class="form-check form-switch  ms-2">
+                            <input class="form-check-input dark-mode-switch" type="checkbox" id="darkmodeSwitch">
+                            <label class="form-check-label" for="darkmodeSwitch"></label>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        -->
+
+        <div class="listview-title mt-1">Notificaciones</div>
+        
+        <ul class="listview image-listview text inset">
+            <li>
+                <div class="item">
+                    <div class="in">
+                        <div>
+                            Notificaciones
+                            <div class="text-muted">Activar / Desactivar notificaciones</div>
+                        </div>
+                        <div class="form-check form-switch  ms-2">
+                            <input class="form-check-input" type="checkbox" id="SwitchCheckDefault1">
+                            <label class="form-check-label" for="SwitchCheckDefault1"></label>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--
+            <li>
+                <a href="#" class="item">
+                    <div class="in">
+                        <div>Notification Sound</div>
+                        <span class="text-primary">Beep</span>
+                    </div>
+                </a>
+            </li>
+            -->
+        </ul>
+
+        <!--
+        <div class="listview-title mt-1">Profile Settings</div>
+        
+        <ul class="listview image-listview text inset">
+            <li>
+                <a href="#" class="item">
+                    <div class="in">
+                        <div>Change Username</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="in">
+                        <div>Update E-mail</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="in">
+                        <div>Address</div>
+                        <span class="text-primary">Edit</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <div class="item">
+                    <div class="in">
+                        <div>
+                            Private Profile
+                        </div>
+                        <div class="form-check form-switch ms-2">
+                            <input class="form-check-input" type="checkbox" id="SwitchCheckDefault2">
+                            <label class="form-check-label" for="SwitchCheckDefault2"></label>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        -->    
+
+        <!--
+        <div class="listview-title mt-1">Security</div>
+        
+        <ul class="listview image-listview text mb-2 inset">
+            <li>
+                <a href="#" class="item">
+                    <div class="in">
+                        <div>Update Password</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <div class="item">
+                    <div class="in">
+                        <div>
+                            2 Step Verification
+                        </div>
+                        <div class="form-check form-switch ms-2">
+                            <input class="form-check-input" type="checkbox" id="SwitchCheckDefault3" checked />
+                            <label class="form-check-label" for="SwitchCheckDefault3"></label>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="in">
+                        <div>Log out all devices</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        -->    
+
+        <br><br>
+
+        <!-- app footer --> 
+        <div class="appFooter">
+            <div class="footer-title">Copyright © Portvil S.L.U 2023. All Rights Reserved.</div>
+        </div>
+        <!-- * app footer -->
+    
+    </div>    
+
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu"></div>
+    <!-- * App Bottom Menu -->
+
+
+    <!-- App Sidebar -->
+    <div class="modal fade panelbox panelbox-left" id="sidebarPanel" tabindex="-1" role="dialog"></div>
+    <!-- * App Sidebar -->
+
+    
+    <!-- Base Js File -->
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js//jquery.min.js"></script> -->
+    <!-- * App Bottom Menu -->
+    <!-- ========= JS Files =========  -->
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <!-- <script src="js/plugins/splide.min.js"></script> -->
+    <!-- Swiper -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- Bootstrap -->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="js/bootstrap.min.js?version=1"></script>
+    <!-- funciones -->
+    <script>
+        // add files
+        // let files = ["jquery.min.js","popper.min.js","bootstrap.min.js","main.js","funciones.js"];
+        let files = ["funciones.js"];
+        for (let index = 0; index < files.length; index++) {
+            const element = files[index];
+            let timestamp = new Date().getTime();    
+            let tag = document.createElement("script");
+            tag.src = 'js/'+element+'?' + timestamp
+            document.querySelector("body").appendChild(tag);
+        }
+    </script>
+    <!-- style -->
+</body>
+</html>

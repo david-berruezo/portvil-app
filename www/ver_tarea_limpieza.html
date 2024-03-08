@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Splide</title>
+    <link rel="stylesheet" href="css/limpieza/style.css">
+    <meta name="description" content="Bitter Mobile Template">
+    <meta name="keywords" content="bootstrap, mobile template, Bootstrap 5, mobile, html, responsive" />
+    <link rel="icon" type="image/png" href="img/icon/limpieza/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icon/192x192.png">
+    <link rel="stylesheet" href="./css/bootstrap.min.css?version=1" type="text/css">
+    <style>
+        .postItem .imageWrapper {
+            border: 1px solid #ccc;
+        }
+        
+        .modal {
+             z-index: 99999!important;
+        }
+    </style>
+</head>
+<body>
+    
+        <!-- Page loading -->
+        <div id="loading">
+            <div class="spinner-grow"></div>
+        </div>
+        <!-- * Page loading -->
+    
+        <!-- App Header -->
+        <div class="appHeader"></div>
+    
+        <!-- App Capsule -->
+        <div id="appCapsule">
+    
+            <div id="contenedor_modal"></div>
+    
+            <div class="appContent">
+    
+                <div class="contenedor_tarea"></div>
+                
+                <div class="divider mt-4 mb-4"></div>    
+
+                <div class="contentBox">
+                    <div class="contentBox-body descripcion_tarea"></div>
+                </div>
+
+                <div class="divider mt-4 mb-2"></div>
+
+                <!-- Button Carousel -->
+                <div class="carousel-small splide buttonCarousel">
+                    <div class="splide__track">
+                        <ul class="splide__list lavanderia_tareas_carousel"></ul>
+                    </div>
+                </div>
+                <!-- * Button Carousel -->
+
+                <div class="divider mt-4 mb-4"></div>
+
+                <div class="sectionTitle mb-2">
+                    <div class="text-muted">Últimas Notícias</div>
+                    <div class="title">
+                        <h1>Blogs</h1>
+                        <a href="blog-category.html">Ver TODAS</a>
+                    </div>
+                </div>
+
+                <!-- post list -->
+                <div class="row noticias-blog-limpieza"></div>
+                
+                <div class="divider mt-4 mb-2"></div>
+
+
+                <!-- Button Carousel -->
+                <div class="carousel-small splide buttonCarousel">
+                    <div class="splide__track">
+                        <ul class="splide__list lavanderia_tareas_carousel"></ul>
+                    </div>
+                </div>
+                <!-- * Button Carousel -->    
+
+                <div class="divider mt-2 mb-4"></div>
+
+                <div class="sectionTitle mb-2">
+                    <div class="text-muted">Recomendaciones</div>
+                    <div class="title">
+                        <h1>Riesgos Laborales</h1>
+                        <a href="blog-category.html">Ver TODOS</a>
+                    </div>
+                </div>
+
+                <!-- Iconed Box -->
+                <div class="row riesgos-laborales"></div>
+                <!-- * Iconed Boxes -->
+
+                <div class="divider mt-2 mb-4"></div>
+                
+                <div class="sectionTitle mb-2">
+                    <div class="text-muted">Recomendaciones</div>
+                    <div class="title">
+                        <h1>Productos de Limpieza</h1>
+                        <a href="blog-category.html">Ver TODOS</a>
+                    </div>
+                    <div class="lead">
+                        Consulta nuestro listado de produtos de limpieza recomendados.
+                    </div>
+                </div>   
+                
+                <!-- item list -->
+                <div class="itemList productos_limpieza"></div>
+
+                <div class="divider mt-2 mb-4"></div>
+
+                <div class="sectionTitle mb-1">
+                    <div class="text-muted">Teléfonos de interés</div>
+                    <div class="title">
+                        <h1>Compañeros</h1>
+                        <a href="blog-category.html">Ver TODOS</a>
+                    </div>
+                </div>
+
+                <!-- listview -->
+                <div class="listView detailed telefonos_interes"></div>
+                <!-- * listview -->
+
+            </div> <!-- content -->
+
+        </div> <!-- capsule -->        
+
+        <!-- App Bottom Menu -->
+        <div class="appBottomMenu"></div>
+        <!-- * App Bottom Menu -->
+
+        <!-- Sidebar Menu -->
+        <div class="offcanvas offcanvas-start sidebarWrapper" tabindex="-1" id="appSidebar"></div>
+        <!-- * Sidebar Menu -->
+
+        <!-- ///////////// Js Files ////////////////////  -->
+        <!-- jquery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Bootstrap-->
+        <script src="js/limpieza/bootstrap.bundle.min.js"></script>
+        <!-- <script src="js/bootstrap.min.js?version=1"></script> -->
+        <!-- Splide -->
+        <!-- <script src="js/plugins/splide/splide.min.js"></script>-->
+        <!-- Main Js File -->
+        <!--<script src="js/app.js"></script>-->
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <!-- momment -->
+        <script src="js/moment.js"></script>
+
+        <!-- funciones -->
+        <script>
+            // add files
+            // let files = ["jquery.min.js","popper.min.js","bootstrap.min.js","main.js","funciones.js"];
+            let files = ["funciones.js"];
+            for (let index = 0; index < files.length; index++) {
+                const element = files[index];
+                let timestamp = new Date().getTime();    
+                let tag = document.createElement("script");
+                tag.src = 'js/'+element+'?' + timestamp
+                document.querySelector("body").appendChild(tag);
+            }
+        </script>
+
+</body>
+</html>

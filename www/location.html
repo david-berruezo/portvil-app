@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">-->
+    <meta name="color-scheme" content="light dark">
+    <title>Portvil</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css?version=1" type="text/css">
+    <link rel="stylesheet" href="./css/style.css?version=4" type="text/css">
+    <link rel="stylesheet" href="./css/swiper.min.css?version=1" type="text/css">
+</head>
+<body>
+
+    <!-- loader -->
+    <div id="loader">
+        <img src="img/loading-icon.png" alt="icon" class="loading-icon">
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader bg-primary text-light"></div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+        
+        <!-- carousel monuments -->
+        <div class="section mt-4">
+            <div class="section-heading padding">
+                <h2 class="title">Lugares cercanos</h2>
+                <a href="app-cards.html" class="link"></a>
+            </div>
+        
+            <div class="wide-block pt-2 pb-2">
+                <div class="panel panel-default my_dashboard_review">
+                    <div class="panel-heading">
+                     <i class="fa fa-book fa-fw"></i>Lugares cercanos
+                    </div>
+                    <div class="panel-body">
+                     <form id="formulario" name="formulario" method="post" action="http://www.portvil.net/dynamic/dupdate/avantio_accomodations_pictures">
+                      <br>
+                      <div class="row">
+                       <div class="col-lg-12">
+                        <!-- Hidden elements -->
+                        <input type="hidden" name="language" value="es">
+                        <input type="hidden" name="id" value="1">
+                        <input type="hidden" name="id_avantio" value="1">
+                        <input type="hidden" name="id" value="297527">
+                        <!-- Language Elements -->
+                       </div>
+                      </div>
+                      <!-- row -->
+                      <div class="row contenedor_locations">
+                        <div class="panel panel-default my_dashboard_review">
+                            <div class="panel-heading">
+                             <h4>Entorno</h4>
+                             <hr>
+                             <i class="fa fa-book fa-fw"></i> Editar Entorno y distáncia <br>
+                             <br>
+                            </div>
+                            <div class="panel-body">
+                             <form id="formulario" name="formulario" method="post" action="http://www.portvil.net/dynamic/dupdate/avantio_accomodations_locations">
+                              <div class="row">
+                               <div class="col-lg-12">
+                                <!-- Hidden elements -->
+                                <input type="hidden" name="language" value="es">
+                                <input type="hidden" name="position" value="0">
+                                <input type="hidden" name="id_avantio" value="1">
+                                <!-- Language Elements -->
+                               </div>
+                              </div>
+                              <!-- row -->
+                              <div class="row">
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Nombre propiedad</label>
+                                 <input type="text" name="text_title" value="" id="text_title" class="form-control">
+                                </div>
+                               </div>
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Dónde</label>
+                                 <input type="text" name="text_loc_where" value="" id="text_loc_where" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Cómo</label>
+                                 <input type="text" name="text_loc_howto" value="" id="text_loc_howto" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Descripción principal</label>
+                                 <input type="text" name="text_loc_desc1" value="" id="text_loc_desc1" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Descripción secundaria</label>
+                                 <input type="text" name="text_loc_desc2" value="" id="text_loc_desc2" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <br>
+                                <br>
+                                <h4>Distancia playa</h4>
+                                <hr>
+                               </div>
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Nombre playa</label>
+                                 <input type="text" name="text_beach_name" value="" id="text_beach_name" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <!-- number -->
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Distancia playa</label>
+                                 <input type="text" name="number_beach_dist" value="" id="number_beach_dist" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Unidad distancia playa</label>
+                                 <input type="text" name="text_beach_dist_unit" value="" id="text_beach_dist_unit" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <br>
+                                <br>
+                                <h4>Distancia golf</h4>
+                                <hr>
+                               </div>
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Nombre golf</label>
+                                 <input type="text" name="text_golf_name" value="" id="text_golf_name" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <!-- number -->
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Distancia golf</label>
+                                 <input type="text" name="number_golf_dist" value="" id="number_golf_dist" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Unidad distancia golf</label>
+                                 <input type="text" name="text_golf_dist_unit" value="" id="text_golf_dist_unit" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <br>
+                                <br>
+                                <h4>Distancia ciudad</h4>
+                                <hr>
+                               </div>
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Nombre ciudad</label>
+                                 <input type="text" name="text_city_name" value="" id="text_city_name" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <!-- number -->
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Distancia ciudad</label>
+                                 <input type="text" name="number_city_dist" value="" id="number_city_dist" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Unidad distancia ciudad</label>
+                                 <input type="text" name="text_city_dist_unit" value="" id="text_city_dist_unit" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <br>
+                                <br>
+                                <h4>Distancia supermercado</h4>
+                                <hr>
+                               </div>
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Nombre supermercado</label>
+                                 <input type="text" name="text_super_name" value="" id="text_super_name" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <!-- number -->
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Distancia supermercado</label>
+                                 <input type="text" name="number_super_dist" value="" id="number_super_dist" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Unidad distancia supermercado</label>
+                                 <input type="text" name="text_super_dist_unit" value="" id="text_super_dist_unit" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <br>
+                                <br>
+                                <h4>Distancia Aeropuerto</h4>
+                                <hr>
+                               </div>
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Nombre aeropuerto</label>
+                                 <input type="text" name="text_airport_name" value="" id="text_airport_name" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <!-- number -->
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Distancia aeropuerto</label>
+                                 <input type="text" name="number_airport_dist" value="" id="number_airport_dist" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Unidad distancia aeropuerto</label>
+                                 <input type="text" name="text_airport_dist_unit" value="" id="text_airport_dist_unit" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <br>
+                                <br>
+                                <h4>Distancia tren</h4>
+                                <hr>
+                               </div>
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Nombre tren</label>
+                                 <input type="text" name="text_train_name" value="" id="text_train_name" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <!-- number -->
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Distancia tren</label>
+                                 <input type="text" name="number_train_dist" value="" id="number_train_dist" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Unidad distancia tren</label>
+                                 <input type="text" name="text_train_dist_unit" value="" id="text_train_dist_unit" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <br>
+                                <br>
+                                <h4>Distancia bus</h4>
+                                <hr>
+                               </div>
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Nombre bus</label>
+                                 <input type="text" name="text_bus_name" value="" id="text_bus_name" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <!-- number -->
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Distancia bus</label>
+                                 <input type="text" name="number_bus_dist" value="" id="number_bus_dist" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <div class="col-lg-12">
+                                <div class="form-group">
+                                 <label>Unidad distancia bus</label>
+                                 <input type="text" name="text_bus_dist_unit" value="" id="text_bus_dist_unit" class="form-control">
+                                </div>
+                               </div>
+                               
+                               <!-- number -->
+                               <!-- checkbox -->
+                               <div class="col-md-12">
+                                <br>
+                                <br>
+                                <h4>Gestión Vistas</h4>
+                                <hr>
+                               </div>
+                               <div class="col-md-12">
+                                <div class="form-group">
+                                 <label>Vistas al mar</label>
+                                 <input type="checkbox" name="checkbox_view_to_beach" value="" disabled="disabled" id="checkbox_view_to_beach" style="margin:10px;">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <div class="form-group">
+                                 <label>Vistas a la piscina</label>
+                                 <input type="checkbox" name="checkbox_view_to_swimming_pool" value="" disabled="disabled" id="checkbox_view_to_swimming_pool" style="margin:10px;">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <div class="form-group">
+                                 <label>Vistas al golf</label>
+                                 <input type="checkbox" name="checkbox_view_to_golf" value="" disabled="disabled" id="checkbox_view_to_golf" style="margin:10px;">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <div class="form-group">
+                                 <label>Vistas al jardñín</label>
+                                 <input type="checkbox" name="checkbox_view_to_garden" value="" checked="checked" disabled="disabled" id="checkbox_view_to_garden" style="margin:10px;">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <div class="form-group">
+                                 <label>Vistas al río</label>
+                                 <input type="checkbox" name="checkbox_view_to_river" value="" disabled="disabled" id="checkbox_view_to_river" style="margin:10px;">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <div class="form-group">
+                                 <label>Vistas a la montaña</label>
+                                 <input type="checkbox" name="checkbox_view_to_mountain" value="" checked="checked" disabled="disabled" id="checkbox_view_to_mountain" style="margin:10px;">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <div class="form-group">
+                                 <label>Vistas al lago</label>
+                                 <input type="checkbox" name="checkbox_view_to_lake" value="" disabled="disabled" id="checkbox_view_to_lake" style="margin:10px;">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <br>
+                                <br>
+                                <h4>Ent. Y Distancia</h4>
+                                <hr>
+                               </div>
+                               <div class="col-md-12">
+                                <div class="form-group">
+                                 <label>Primera línia de playa</label>
+                                 <input type="checkbox" name="checkbox_first_line_beach" value="" disabled="disabled" id="checkbox_first_line_beach" style="margin:10px;">
+                                </div>
+                               </div>
+                               
+                               <div class="col-md-12">
+                                <div class="form-group">
+                                 <label>Primera línia de golf</label>
+                                 <input type="checkbox" name="checkbox_first_line_golf" value="" disabled="disabled" id="checkbox_first_line_golf" style="margin:10px;">
+                                </div>
+                               </div>
+                                
+                               <br style="clear:both;">
+                               <br>
+                              </div>
+                             </form>
+                            </div>
+                            <div class="col-md-12">
+                             <!--
+                                               <input type="submit" id="enviar" class="btn btn-lg btn-thm" value="Guardar">
+                                               -->
+                            </div>
+                            <!-- estos div no los cerramos porque en template locations no tenémos pestaña seo -->
+                            <!--
+                                               </div></div></div>
+                                   -->
+                           
+                           </div>
+                      </div> <!-- row -->
+                      <div class="my_profile_setting_input">
+                        </div>
+                     </form>
+                    </div>
+                    <!-- panel body -->
+                   </div>                
+            </div>
+
+        </div>            
+
+        <br><br>
+
+        <!-- app footer --> 
+        <div class="appFooter">
+            <div class="footer-title">Copyright © Portvil S.L.U 2023. All Rights Reserved.</div>
+        </div>
+        <!-- * app footer -->
+
+    </div>
+    <!-- app capsule -->    
+
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu"></div>
+    <!-- * App Bottom Menu -->
+    
+
+    <!-- App Sidebar -->
+    <div class="modal fade panelbox panelbox-left" id="sidebarPanel" tabindex="-1" role="dialog"></div>
+    <!-- * App Sidebar -->
+
+    <!-- Base Js File -->
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js//jquery.min.js"></script> -->
+    <!-- * App Bottom Menu -->
+    <!-- ========= JS Files =========  -->
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <!-- <script src="js/plugins/splide.min.js"></script> -->
+    <!-- Swiper -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- Bootstrap -->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="js/bootstrap.min.js?version=1"></script>
+    <!-- funciones -->
+    <script src="js/funciones.js?v=14"></script>
+
+</body>
+</html>

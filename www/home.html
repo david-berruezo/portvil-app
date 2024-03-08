@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portvil</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css?version=1" type="text/css">
+    <link rel="stylesheet" href="./css/style.css?version=5" type="text/css">
+    <link rel="stylesheet" href="./css/swiper.min.css?version=1" type="text/css">
+    <style>
+        .swiper-slide{
+            background-color: transparent!important;
+        }
+
+        .card-redondo {
+            background: #ffffff;
+            border: 1px solid #fff;
+            border-radius: 10px!important;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- loader -->
+    <div id="loader">
+        <img src="img/loading-icon.png" alt="icon" class="loading-icon">
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader bg-primary text-light"></div>
+    <!-- * App Header -->
+    
+    <!-- App Capsule -->
+    <div id="appCapsule">
+   
+        <!-- Wallet Card -->
+        <div class="section mt-4">
+        <!-- <div class="section wallet-card-section pt-1"> -->
+            <div class="section-heading">
+                <h2 class="title">Teléfonos</h2>
+                <a id="enlace_telefonos" href="#" class="link" onclick="ir_otra_pagina('telefonos.html')">Ver todos</a>
+            </div>
+            <div class="wallet-card">
+                <div class="balance">
+                    <div class="left">
+                        <span class="title">Teléfonos de interés</span>
+                        <h1 class="total"><ion-icon name="call"></ion-icon> 24h!!</h1>
+                    </div>
+                    <div class="right">
+                        
+                        <a href="#" class="button" data-toggle="modal" data-target="#nuevo">
+                            <ion-icon name="add-outline"></ion-icon>
+                        </a>
+                         
+                    </div>
+                </div>
+                <!-- telefonos generales -->    
+                <div id="contenedor_telefonos" class="wallet-footer"></div>
+            </div>
+        </div>
+        <!-- Wallet Card -->
+        
+        <div id="contenedor_modal">
+            
+            <div class="modal fade action-sheet" id="nuevo" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Nuevo número</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="action-sheet-content">
+                                <!-- contenedor telefonos -->
+                                <div class="contenedorFormularioTelefsonos">
+                                    <form action="home.html" name="formulario-insertar-telefono" id="formulario-insertar-telefono" onsubmit="return validateInsertTelefono(this);" method="POST">
+                                        <input type="hidden" name="username" id="username" value="">
+                                        <div class="form-group basic">
+                                            <div class="input-wrapper">
+                                                <label class="label" for="account1">From</label>
+                                                <select class="form-control custom-select" name="account1" id="account1">
+                                                    <option value="0">From 08:00h to 20:00h</option>
+                                                    <option value="1">From 00:00h to 23:00h</option>
+                                                </select>
+                                            </div>
+                                        </div>
+        
+                                        <div class="form-group basic">
+                                            <label class="label">Escribe tu número de teléfono</label>
+                                            <div class="input-group mb-2">
+                                                <span class="input-group-text" id="basic-addona1">Telf:</span>
+                                                <input type="text" name="num_telefono" id="num_telefono" class="form-control" placeholder="Introduce tu número" value="">
+                                            </div>
+                                        </div>
+        
+                                        <div class="form-group basic">
+                                            <input type="submit" class="btn btn-primary btn-block btn-lg" data-bs-dismiss="modal" value="Guardar" />
+                                        </div>
+                                    </form>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div> <!-- contenedor modals -->
+
+
+         <!-- Stats -->
+         <div class="section" id="contenedor_grande_telefonos"></div>
+         <!-- * Stats -->
+        
+        <!-- telefonos usuario -->
+        <div class="section" id="contenedor_telefonos_usuario"></div>
+
+        <!-- propiedades | fotos ... etc -->
+        <div class="contenedorHome"></div>
+
+        <!-- carousel monuments -->
+        <div class="section mt-4">
+            <div class="section-heading padding">
+                <h2 class="title">Monumentos</h2>
+                <a id="link_monumentos" href="#" onclick="ir_otra_pagina('monumentos.html')" class="link">Ver Todos</a>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper-container carousel-monumentos">
+                <div class="swiper-wrapper wrapper-monumentos"></div>
+            </div>
+        </div> <!-- section-->
+
+        <div class="section mt-4">
+            <div class="section-heading padding">
+                <h2 class="title">Noticias</h2>
+                <a id="link_noticias" href="#" onclick="ir_otra_pagina('noticias.html')" class="link">Ver Todos</a>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper-container carousel-noticias">
+                <div class="swiper-wrapper wrapper-noticias"></div>
+            </div>
+        </div>  
+    
+
+        <div class="section mt-4">
+            <div class="section-heading padding">
+                <h2 class="title">Discotecas / Bares</h2>
+                <a id="link_discotecas" href="#" onclick="ir_otra_pagina('bares_discotecas.html')" class="link">Ver Todos</a>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper-container carousel-discotecas">
+                <div class="swiper-wrapper wrapper-discotecas"></div>
+            </div>
+        </div>
+
+
+        <div class="section mt-4">
+            <div class="section-heading padding">
+                <h2 class="title">Restaurantes</h2>
+                <a id="link_restaurantes" href="#" onclick="ir_otra_pagina('restaurantes.html')" class="link">Ver Todos</a>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper-container carousel-restaurantes">
+                <div class="swiper-wrapper wrapper-restaurantes"></div>
+            </div>
+        </div>
+        
+        <div class="section mt-4">
+            <div class="section-heading">
+                <h2 class="title">Valoraciones Restaurantes</h2>
+                <!-- <a href="app-savings.html" class="link">Ver Todos</a> -->
+            </div>
+            <div class="goals">
+                <!-- item -->
+                <div class="item">
+                    <div class="in">
+                        <div>
+                            <h4>La placeta</h4>
+                            <p>Marisqueria</p>
+                        </div>
+                        <div class="price">30 Euros</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- app footer --> 
+        <div class="appFooter">
+            <div class="footer-title">Copyright © Portvil S.L.U 2023. All Rights Reserved.</div>
+        </div>
+        <!-- * app footer -->
+    
+    </div>    
+
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu"></div>
+    <!-- * App Bottom Menu -->
+
+
+    <!-- App Sidebar -->
+    <div class="modal fade panelbox panelbox-left" id="sidebarPanel" tabindex="-1" role="dialog"></div>
+    <!-- * App Sidebar -->
+
+    
+    <!-- Base Js File -->
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js//jquery.min.js"></script> -->
+    <!-- * App Bottom Menu -->
+    <!-- ========= JS Files =========  -->
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <!-- <script src="js/plugins/splide.min.js"></script> -->
+    <!-- Swiper -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- Bootstrap -->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="js/bootstrap.min.js?version=1"></script>
+    <!-- funciones -->
+    <script>
+        // add files
+        // let files = ["jquery.min.js","popper.min.js","bootstrap.min.js","main.js","funciones.js"];
+        let files = ["funciones.js"];
+        for (let index = 0; index < files.length; index++) {
+            const element = files[index];
+            let timestamp = new Date().getTime();    
+            let tag = document.createElement("script");
+            tag.src = 'js/'+element+'?' + timestamp
+            document.querySelector("body").appendChild(tag);
+        }
+    </script>
+    <!-- style -->
+</body>
+</html>

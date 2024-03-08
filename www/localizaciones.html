@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localizaciones</title>
+    <style>
+        .texto {
+            color:#000;
+        }
+    </style>
+</head>
+<body>
+    
+    <p class="latitude texto"></p>
+    <p class="longitude texto"></p>
+    <p class="altitude texto"></p>    
+    <p class="accuracy texto"></p>
+    <p class="altitudeAccuracy texto"></p>
+    <p class="heading texto"></p>
+    <p class="speed texto"></p>
+    <p class="timestamp texto"></p>
+    
+    <!-- Base Js File -->
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js//jquery.min.js"></script> -->
+    <!-- * App Bottom Menu -->
+    <!-- ========= JS Files =========  -->
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <!-- <script src="js/plugins/splide.min.js"></script> -->
+    <!-- Swiper -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- Bootstrap -->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="js/bootstrap.min.js?version=1"></script>
+    <!-- funciones -->
+    <script>
+        // add files
+        // let files = ["jquery.min.js","popper.min.js","bootstrap.min.js","main.js","funciones.js"];
+        let files = ["funciones.js"];
+        for (let index = 0; index < files.length; index++) {
+            const element = files[index];
+            let timestamp = new Date().getTime();    
+            let tag = document.createElement("script");
+            tag.src = 'js/'+element+'?' + timestamp
+            document.querySelector("body").appendChild(tag);
+        }
+    </script>
+    <!-- style -->
+</body>
+</html>

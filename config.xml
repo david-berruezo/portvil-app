@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.paquete.portvil" android-versionCode="10056" version="1.0.56" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Portvil</name>
+    <description>Portvil Aplication</description>
+    <author email="davidberruezo@davidberurezo.com" href="https://www.davidberruezo.com">Portvil Aplication</author>
+    <plugin name="cordova-plugin-geolocation" spec="4.1.0">`
+       <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="App uses geolocation to determine where you are." />
+    </plugin>
+    <platform name="android">
+            <icon src="www/images/logo.png" platform="android" width="256" height="256" density="mdpi" />
+            <icon background="www/images/logo.png" density="ldpi" foreground="www/images/logo.png" />
+            <icon background="www/images/logo.png" density="mdpi" foreground="www/images/logo.png" />
+            <icon background="www/images/logo.png" density="hdpi" foreground="www/images/logo.png" />
+            <icon background="www/images/logo.png" density="xhdpi" foreground="www/images/logo.png" />
+            <icon background="www/images/logo.png" density="xxhdpi" foreground="www/images/logo.png" />
+            <icon background="www/images/logo.png" density="xxxhdpi" foreground="www/images/logo.png" />
+            <uses-permission name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+            <uses-permission name="com.google.android.gms.permission.AD_ID"/>
+    </platform>
+    <plugin name="cordova-plugin-geolocation" spec="4.1.0" />
+    <access origin="*" />
+    <content src="index.html" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+</widget>

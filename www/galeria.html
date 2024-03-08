@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--<meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">-->
+    <meta name="color-scheme" content="light dark">
+    <title>Portvil</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css?version=1" type="text/css">
+    <link rel="stylesheet" href="./css/style.css?version=4" type="text/css">
+    <link rel="stylesheet" href="./css/swiper.min.css?version=1" type="text/css">
+</head>
+<body>
+
+    <!-- loader -->
+    <div id="loader">
+        <img src="img/loading-icon.png" alt="icon" class="loading-icon">
+    </div>
+    <!-- * loader -->
+
+    <!-- App Header -->
+    <div class="appHeader bg-primary text-light"></div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+        
+        <!-- carousel monuments -->
+        <div class="section mt-4">
+            <div class="section-heading padding">
+                <h2 class="title">Galería</h2>
+                <a href="app-cards.html" class="link"></a>
+            </div>
+        
+            <div class="wide-block pt-2 pb-2">
+                <div class="panel panel-default my_dashboard_review">
+                    <div class="panel-heading">
+                     <i class="fa fa-book fa-fw"></i>Galería Villas
+                    </div>
+                    <div class="panel-body">
+                     <form id="formulario" name="formulario" method="post" action="http://www.portvil.net/dynamic/dupdate/avantio_accomodations_pictures">
+                      <br>
+                      <div class="row">
+                       <div class="col-lg-12">
+                        <!-- Hidden elements -->
+                        <input type="hidden" name="language" value="es">
+                        <input type="hidden" name="id" value="1">
+                        <input type="hidden" name="id_avantio" value="1">
+                        <input type="hidden" name="id" value="297527">
+                        <!-- Language Elements -->
+                       </div>
+                      </div>
+                      <!-- row -->
+                      <div class="row contenedor_imagenes">
+                      
+                      </div> <!-- row -->
+                      <div class="my_profile_setting_input">
+                        </div>
+                     </form>
+                    </div>
+                    <!-- panel body -->
+                   </div>                
+            </div>
+
+        </div>            
+
+        <br><br>
+
+        <!-- app footer --> 
+        <div class="appFooter">
+            <div class="footer-title">Copyright © Portvil S.L.U 2023. All Rights Reserved.</div>
+        </div>
+        <!-- * app footer -->
+
+    </div>
+    <!-- app capsule -->    
+
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu"></div>
+    <!-- * App Bottom Menu -->
+    
+
+    <!-- App Sidebar -->
+    <div class="modal fade panelbox panelbox-left" id="sidebarPanel" tabindex="-1" role="dialog"></div>
+    <!-- * App Sidebar -->
+
+
+    <!-- Base Js File -->
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js//jquery.min.js"></script> -->
+    <!-- * App Bottom Menu -->
+    <!-- ========= JS Files =========  -->
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Splide -->
+    <!-- <script src="js/plugins/splide.min.js"></script> -->
+    <!-- Swiper -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- Bootstrap -->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="js/bootstrap.min.js?version=1"></script>
+    <!-- funciones -->
+    <script src="js/funciones.js?v=14"></script>
+
+</body>
+</html>

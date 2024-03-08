@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portvil</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/iofrm-style.css">
+    <link rel="stylesheet" type="text/css" href="css/iofrm-theme14.css">
+    <style>
+        .website-logo-inside .logo img {
+            width: 200px;
+            margin-left: -20px!important;
+        }
+        .website-logo-inside .logo img.logo-size {
+            opacity: 1 !important;
+        }
+
+        .website-logo-inside .logo {
+            background-image: none;
+        }
+        .form-body{
+            background-color:#152733!important;;
+        }
+        .password_incorrecto{
+            display:none;     
+        }
+        
+        .email_no_existe{
+            display:none;   
+        }
+    </style>
+</head>
+<body>
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <div class="website-logo-inside">
+                            <a href="index.html">
+                                <div class="logo">
+                                    <img class="logo-size" src="images/logo-dos.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <h3>Gran selección de viviendas vacacionales</h3>
+                        <p>Empresa especializada con más de 40 años de experiencia en el alquiler de viviendas vacacionales</p>
+                        <div class="page-links">
+                            <a onclick="ir_otra_pagina('index.html')" href="#" class="active">Login</a>
+                            <a onclick="ir_otra_pagina('registro.html')" class="active" href="#">Registrate</a>
+                        </div>
+
+                        <!-- contenedor formulario -->
+                        <div class="contenedorFormulario"></div>
+                        
+                        <!--
+                        <form action="home.html" name="formulario-insertar-usuario" id="formulario-insertar-usuario" onsubmit="return ValidateInsertUser(this.name.value,this.email.value,this.password.value)" method="POST">
+                            <input class="form-control" type="text" id="name" name="name" placeholder="Nombre" required>
+                            <input class="form-control" type="email" id="email" name="email" placeholder="E-mail Address" required>
+                            <input class="form-control" type="password" id="password" name="password" placeholder="Password" required>
+                            <div class="form-button">
+                                <button id="submit" type="submit" class="ibtn">Login</button>
+                                <a href="portvil-forget.html">Olvidaste el password?</a>
+                            </div>
+                            <div class="form-button">
+                                <p class="password_incorrecto">Ha habido un error</p>
+                                <p class="email_no_existe">Email ya existe</p>
+                            </div>
+                        </form>
+                        -->
+                        <div class="other-links">
+                            <!-- <span>Or login with</span> -->
+                            <a href="https://es-es.facebook.com/portvil/" target="_blank">Facebook</a>
+                            <a target="_blank" href="https://www.google.com/search?q=portvil&amp;sxsrf=ALiCzsacc7IN7Uv8sgunztyyLu9Lm2Kctw%3A1651232473028&amp;source=hp&amp;ei=2M5rYsnlPIeFur4P6Ie0-Aw&amp;iflsig=AJiK0e8AAAAAYmvc6WVgQkwmgAfQmrZCVMz6zrgQnZxw&amp;ved=0ahUKEwjJsfqnmLn3AhWHgs4BHegDDc8Q4dUDCAk&amp;uact=5&amp;oq=portvil&amp;gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyBAgjECcyBwgAEIAEEAoyBwgAEIAEEAoyCgguEMcBEK8BEEMyBwgAEAoQywEyCwguEIAEEMcBEK8BMgUIABCABDIHCAAQgAQQCjoHCCMQ6gIQJzoLCAAQgAQQsQMQgwE6CwguEIAEELEDEIMBOggILhCxAxCDAToRCC4QgAQQsQMQgwEQxwEQowI6BAgAEEM6CAguEIAEELEDOgUILhCABDoICAAQsQMQgwE6CwguEIAEELEDENQCUJ0FWNgKYJAMaAFwAHgAgAGDBIgB8Q6SAQkyLTEuMi4xLjGYAQCgAQGwAQo&amp;sclient=gws-wiz">Google</a>
+                            <a target="_blank" href="http://www.portvil.com/">Website</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- <script src="./js/funciones.js?version=3"></script> -->
+    <script>
+        // add files
+        // let files = ["jquery.min.js","popper.min.js","bootstrap.min.js","main.js","funciones.js"];
+        let files = ["funciones.js"];
+        for (let index = 0; index < files.length; index++) {
+            const element = files[index];
+            let timestamp = new Date().getTime()    
+            let tag = document.createElement("script");
+            tag.src = 'js/'+element+'?' + timestamp
+            document.querySelector("body").appendChild(tag);
+        }
+        window.onload = () => {
+            // empty    
+        }
+    </script>
+</body>
+</html>
